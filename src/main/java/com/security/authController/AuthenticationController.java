@@ -27,7 +27,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(response);
 
     }
-
+    // Api to authenticate the user and generate the token for the consequent requests
     @PostMapping("/authentication")
     public ResponseEntity<AuthenticationResponse> authenticate(
             @RequestBody AuthenticationRequest request
