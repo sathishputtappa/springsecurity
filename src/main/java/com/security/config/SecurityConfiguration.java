@@ -40,7 +40,7 @@ public class SecurityConfiguration {
 
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests.requestMatchers("/api/v1/auth/**","/h2-console/**")
+                        authorizeRequests.requestMatchers("/api/v1/auth/**","/h2-console/**","/actuator/**")
                                 .permitAll()
                                 .anyRequest().authenticated()
                 )
